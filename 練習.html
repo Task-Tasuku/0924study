@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="jp" style="scroll-padding-top:50px;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>診断サービス</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">    
+</head>
+<body>
+
+    <div class="container">
+		<div class="row">	
+			<div class="col-md-4 col-sm-6 col-xs-12">    <!-- sm時は6 xs時は12 -->
+				
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-12">    <!-- sm時は6 xs時は12 -->
+				
+			</div>
+			<div class="col-md-4 col-sm-12 col-xs-12">    <!-- sm時は12 xs時は12 -->
+				
+			</div>
+		</div>
+	</div>
+
+<!-- NAV -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="./練習logo.png" height="30"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse fw-bold" id="navbarNav">
+            <ul class="navbar-nav ms-auto me-2">
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="#hero">ホーム</a></li>
+                <li class="nav-item"><a class="nav-link" href="#feature">特徴</a></li>
+                <li class="nav-item"><a class="nav-link" href="#showcases">詳細</a></li>
+                <li class="nav-item"><a class="nav-link" href="#showcases">プラン</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">メンバー</a></li>
+            </ul>
+            <a class="btn btn-dark btn-sm text-white" href="#">無料で始める</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="bg-primary text-white py-5" id="hero">
+    <div class="container overflow-hidden">
+        <div class="row flex-lg-row-reverse align-items-center">
+            <div class="col-lg-6" data-aos="zoom-in">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAC0CAMAAAB4+cOfAAABhlBMVEX////44b8ZmewCl/D/mgA4hMXohgAUeb0lXKH65MPCjk/DkFLBjU0AlfAAke//mQDu0ama0PX1kQAAlevtigDBi0jQ6vbItZoAlvHwjQD09fr027f/lgDs9/0Aj+8AmfEAT5vVrHnHllrLnWTv063kw5j/5sDeuoz58+zOoWobV5/SqHNjsesypPDKkkqdckAvcLLTroTq2cfdwKDctoYATJooYqYmkd6KxvFZr+622vXh8/tDrPImnu42hsm1w9fG4frt3895vu6q1fMegs+53/T17eTjzLPNkkS0kmo1nOHauZT/oSWhtNBbhLVAcax4l8HT3OmIocPY4ey8y99hmc14ptSYvN2mxeNUkst9mr83a6eyqaVRZIyAdHalmIyZmpiqlHhxc4Sol4WHl6N1h6NYdqGdn6fCuKq4jFtDaJuihWxkco9/krCPfnZlnMOwk293hJwPc8L+r1D+uWyoqrL/0qP+qUF5dYP+uGalczGPdFwhUoUDRH+XcEbh180AOHf9xYMoms2zAAAdqElEQVR4nO2di3/T1tmAbRlq6+ZYFRaZE19iOxfbkpNAcCRZokaOkxIGlHJpabq1bLQFWlo+2q3ttq7bf75zji7W5Rz5pkC+H3nHWEZiW3ry3s97jlKpczmXczmXczmXczmXczmXczmXczmXczm7Urp95+7djx6U3vZ1nDW5Xau1gdSu3b197xzOWD6q5Vxp13p3Prj/ti/ojMhtwKW3s9Pz2FzrfXxuVcC/ACzZi1D8cHJ3br/rigMU5uJYxmza7d677Y7vtHcuBsSvOLU77647vpa7GBWPje2Oy2/7It+CPKjhwAStqnbt5N1zxx+FLckv2XfYHffaWTKYkDuu5d4dd3yPaEkExand+fje277oNyEft3eu42lcf/joenasTX7FeRfc8d32dYrax7F5BL5775OHF8dssqfmjsvlPpRy+cwYarmWUygoUTafOD/x4NFFv+Ls+ON4Au64r6uaYlb5PBC+aiqyOjgL2vhB7YRyZf96EM6n3gXe/9SvOMm547IuVyEPfnk5g2R5mecBItMaJHBvC8kdaElj2fcrTjb7+BMv7S3d++RxFm9V7TsP5vpsXePzvEMkKMv5fFWWkrvL2aXUbh9TIQkYVfbi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"
+                    class="img-fluid">
+            </div>
+            <div class="col-lg-6" data-aos="fade-up">
+                <p class="badge bg-warning text-white mb-1">気になる症状に</p>
+                <h1>診断サービス</h1>
+                <p class="lead">スマホ一台でカンタン診断！</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURE -->
+<section class="bg-light py-4" id="feature">
+    <div class="container overflow-hidden">
+        <div class="row text-center" data-aos="zoom-in">
+            <div class="col-md-4 mb-3">
+                <div class="fs-1 text-primary"><i class="bi bi-alarm" color="dark"></i></div>
+                <h5>いつでもアクセス</h5>
+                <p class="text-muted">スキマ時間、思いついたらすぐに使えます。</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="fs-1 text-primary"><i class="bi bi-search" color="dark"></i></div>
+                <h5>高い診断精度</h5>
+                <p class="text-muted">「診断の精度」にこだわったコンテンツです。</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="fs-1 text-primary"><i class="bi bi-gear-wide-connected" color="dark"></i></div>
+                <h5>ワンタッチ連携</h5>
+                <p class="text-muted">様々な外部のツールとワンタッチで連動できます。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHOWCASES -->
+<section class="bg-white py-5" id="showcases">
+    <div class="container overflow-hidden">
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 order-lg-1" data-aos="zoom-in-right">
+                <img class="img-fluid"
+                    src="https://media.istockphoto.com/photos/aerial-view-white-clouds-in-blue-sky-top-view-view-from-drone-aerial-picture-id1173065859?b=1&k=20&m=1173065859&s=170667a&w=0&h=7CXeMv8yaKgWyOIulgjgNNoQu7wdBM_WE9n1dxBRpgQ=">
+            </div>
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                <span class="display-3 text-primary">01</span>
+                <h3>いつでもアクセス</h3>
+                <p>スマホ1台でアクセスし、Web環境があればいつでもどこでも診断を可能にしました。</p>
+            </div>
+        </div>
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 order-lg-2" data-aos="zoom-in-left">
+                <img class="img-fluid"
+                    src="https://media.istockphoto.com/photos/target-picture-id1207121866?k=20&m=1207121866&s=612x612&w=0&h=M92i1_6wOO991VM9XWqBxTUEF_2DD4yw-PuLcwWv_eA=">
+            </div>
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+                <span class="display-3 text-primary">02</span>
+                <h3>高い診断精度</h3>
+                <p>日々更新しているデータを活用することで高い精度の診断結果が期待できます。</p>
+            </div>
+        </div>
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6 order-lg-1" data-aos="zoom-in-right">
+                <img class="img-fluid"
+                    src="https://media.istockphoto.com/photos/close-up-of-a-stethoscope-and-digital-tablet-with-virtual-electronic-picture-id1369987284?b=1&k=20&m=1369987284&s=170667a&w=0&h=AGfMl3GijlNljyLVXOv9Ekeo9ybc97h4KVxPYG2bAL0=">
+            </div>
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left">
+                <span class="display-3 text-primary">03</span>
+                <h3>外部ツールとのワンタッチ連携</h3>
+                <p>ヘルスケアアプリやSNS、オンライン診療アプリとワンタッチ連携！診断結果をカンタンに保存しておくことができます。
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-primary text-white py-5">
+    <div class="container overflow-hidden">
+        <div class="row text-center">
+            <div class="col" data-aos="zoom-in">
+                <h3 class="py-5">診断をはじめよう！</h3>
+                <p class="lead">スマホ撮影で症状をカンタンに判別。</p>
+                <p class="lead py-3"><a href="#" class="bg-warning text-white btn btn-lg btn-outline-light">診断を始める</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- PRICE -->
+<section class="bg-light py-5" id="price">
+    <div class="container overflow-hidden">
+        <div class="row text-center">
+            <h3 class="mb-4">プラン比較</h3>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col" data-aos="zoom-in" data-aos-delay="0">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header p-3">
+                        <h4 class="my-0 fw-normal">お試しプラン</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title fs-1"><span class="h4">¥</span>0<span class="h4 text-muted fw-light">
+                                /月</span></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><i class="bi-check-lg text-success"></i>診断サービス</li>
+                            <li class="text-muted text-decoration-line-through">診断結果の保存</li>
+                            <li class="text-muted text-decoration-line-through">外部ツールとの連携</li>
+                            <li><i class="text-muted text-decoration-line-through"></i>診療サポート</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">すぐに試す</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-aos="zoom-in" data-aos-delay="100">
+                <div class="card mb-4 shadow-sm border-primary">
+                    <div class="card-header py-3 bg-primary text-white border-primary">
+                        <h4 class="my-0 fw-normal">個人プラン</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title fs-1"><span class="h4">¥</span>0<span class="h4 text-muted fw-light">
+                                /月（今だけ特別！）</span></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><i class="bi-check-lg text-success"></i>診断サービス</li>
+                            <li><i class="bi-check-lg text-success"></i>診断結果の保存</li>
+                            <li class="text-muted text-decoration-line-through">外部ツールとの連携</li>
+                            <li class="text-muted text-decoration-line-through">診療サポート</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-primary">登録・ログイン</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">法人プラン</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title fs-1"><span class="h4">¥</span>50,000〜<span
+                                class="h4 text-muted fw-light"> /月</span>
+                        </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li><i class="bi-check-lg text-success"></i>診断サービス</li>
+                            <li><i class="bi-check-lg text-success"></i>診断結果の保存</li>
+                            <li><i class="bi-check-lg text-success"></i>外部ツールとの連携</li>
+                            <li><i class="bi-check-lg text-success"></i>診療サポート</li>
+                        </ul>
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">ご相談ください</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-white py-5" id="faq">
+    <div class="container overflow-hidden">
+        <div class="row text-center">
+            <h3 class="mb-4">よくある質問</h3>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-3" data-aos="zoom-in-right">
+                <img class="img-fluid"
+                    src="https://media.istockphoto.com/photos/beautiful-kid-playing-thinker-with-serious-picture-id1138876864?k=20&m=1138876864&s=612x612&w=0&h=WQvsdXeoewBTyPbeg5HKwO6UKf7qYi_V7PuYRwt8zNU=">
+            </div>
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="accordion" id="accordionFAQ">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                                <p>Q. どんな病気が診断できますか？</p>
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                A. 皮膚症状から推測できる病気が判別できます。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                <p>Q. 診断結果は正確ですか？</p>
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                A. 本サービスはAIを活用し高い精度を誇っていますが、確定診断を保証するものではありません。治療においては医療機関をご利用ください
+                            </div>
+                        </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                <p>Q. 画像情報など個人情報は保護されますか？</p>
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                A. 診断データは診断精度のために一部活用しますが、それ以外の情報は保護されます。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                <p>Q. このページは何ですか？</p>
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                A. コンテンツのサンプルページです。サービス自体まだ構想段階です。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section class="bg-light p-5" id="team">
+    <div class="container overflow-hidden">
+        <div class="row text-center">
+            <h3 class="mb-4">講師／メンター</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="bg-white border shadow p-4 h-100">
+                    <img class="rounded-circle mb-3"
+                        src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=3c872b28d4577889c194cbc98b672696"
+                        width="80">
+                    <p class="text-muted fw-bold">佐藤 太郎</p>
+                    <p class="border-bottom">メディカルアドバイザー</p>
+                    <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white border shadow p-4 h-100">
+                    <img class="rounded-circle mb-3"
+                        src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=8de3b58cab71e0ce7d1e1081418edb62"
+                        width="80">
+                    <p class="text-muted fw-bold">鈴木 太郎</p>
+                    <p class="border-bottom">エンジニア</p>
+                    <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white border shadow p-4 h-100">
+                    <img class="rounded-circle mb-3"
+                        src="https://doodleipsum.com/700x700/avatar-4?bg=87CEEB&i=58e15545cbaaccdde1e619aa57b6f85f"
+                        width="80">
+                    <p class="text-muted fw-bold">高橋 花子</p>
+                    <p class="border-bottom">医師</p>
+                    <p>本ページはサンプルであり、サポートメンバーは架空の人物です。</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="300">
+                
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-light py-5">
+    <div class="container overflow-hidden">
+        <div class="row text-center">
+            <div class="col">
+                <h3 class="py-5">お問い合わせ</h3>
+                <p class="lead">ご不明点や不安な点は以下のフォームよりご相談ください</p>
+                <p class="lead py-3"><a href="https://docs.google.com/forms/d/19gVY8FW257EX0Aty9P6Yyw1bKQTT4QCjmuJ6cxr-csc/edit#responses" class="btn btn-lg btn-outline-dark">お問い合わせはこちら</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-3 bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col"><a href="https://monomonotech.jp/" class="text-decoration-none text-white">&copy; disearch</a></div>
+            <div class="col text-end"><a href="#" class="text-decoration-none text-white"><i class="bi bi-chevron-up"></i> Back to top</a></div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+</script> 
+</body>
+</html>
